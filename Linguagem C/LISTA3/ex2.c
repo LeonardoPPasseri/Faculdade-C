@@ -3,31 +3,30 @@
 #include <math.h>
 
 int analisar_SitEleitoral(int idade){
-    char nao[20],facult[20],eleitor[20];
+    int nao,facult,eleitor;
+
     if(idade >= 18 && idade <= 70){
+        eleitor = "Eleitor";
+        return eleitor;
+    }
+    if(idade < 16){
         nao = "Nao Eleitor";
         return nao;
     }
     else{
-        if(idade >= 16 && idade < 18){
-            eleitor = "Eleitor";
-            return eleitor;
-        }
-        else{
-            facult = "Eleitor Facultativo";
-            return facult;
-        }
+        facult = "Eleitor Facultativo";
+        return facult;
     }
 }
 
 void main(){
     int idade;
-    char resultado[5];
+    int resultado;
+
     printf("Digite a idade:");
-    scanf("%d",idade);
+    scanf("%d",&idade);
 
     resultado = analisar_SitEleitoral(idade);
 
     printf("Essa pessoa e: %s",resultado);
 }
-

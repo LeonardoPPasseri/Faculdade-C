@@ -1,3 +1,7 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
 int calcular_soma(int num1, int num2, int num3){
     int ressoma;
     ressoma = num1 + num2 + num3;

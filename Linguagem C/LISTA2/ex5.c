@@ -2,6 +2,10 @@
 
 // matrícula, média das provas, média dos trabalhos e média final.
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
 float calcular_media(float num1,float num2){
     float res;
     res = (num1+num2)/2;
