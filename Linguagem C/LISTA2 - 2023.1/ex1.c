@@ -14,7 +14,7 @@ int calcular_media(int num1, int num2, int num3){
     return resmedia;
 }
 
-void programa(){
+void programa(){ 
 
     int soma, media, numero1, numero2, numero3;
 
