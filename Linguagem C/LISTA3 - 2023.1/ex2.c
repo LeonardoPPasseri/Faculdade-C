@@ -3,7 +3,7 @@
 #include <math.h>
 
 int analisar_SitEleitoral(int idade){
-    int nao,facult,eleitor;
+    char nao,facult,eleitor;
 
     if(idade >= 18 && idade <= 70){
         eleitor = "Eleitor";
@@ -28,5 +28,5 @@ void main(){
 
     resultado = analisar_SitEleitoral(idade);
 
-    printf("Essa pessoa e: %s",resultado);
+    printf("\nSituação Eleitoral: %s",resultado);
 }

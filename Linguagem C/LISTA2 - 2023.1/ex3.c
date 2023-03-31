@@ -5,34 +5,25 @@
 int calcular_soma(int num1, int num2, int num3){
     int ressoma;
     ressoma = num1 + num2 + num3;
-    printf("a soma e: %d", ressoma);
+    printf("\nSoma:%d",ressoma);
+
     return ressoma;
 }
-int calcular_media(int num1, int num2, int num3){
-    int resmedia;
-    resmedia = calcular_soma(num1,num2,num3) / 3;
-    printf("a media e: %d",resmedia);
-    return resmedia;
-}
-
-void programa(){
-
-    int soma, media, numero1, numero2, numero3;
-
-    printf("Digite o primeiro numero:");
-    scanf("%d", &numero1);
-
-    printf("Digite o primeiro numero:");
-    scanf("%d", &numero2);
-
-    printf("Digite o primeiro numero:");
-    scanf("%d", &numero3);
-
-    soma = calcular_soma(numero1, numero2, numero3);
-    media = calcular_media(numero1, numero2, numero3);
-
-    printf("a soma e: %d e a media e: %d", soma, media);
+void calcular_media(int num1, int num2, int num3){
+    float resmedia;
+    resmedia = calcular_soma(num1,num2,num3)/3.0;
+    printf("\nMedia: %.2f \n",resmedia);
 
 }
 
+int main(){
 
+    int totsoma, numero1, numero2, numero3;
+
+    printf("Digite 3 numeros inteiros:");
+    scanf("%d%d%d", &numero1,&numero2,&numero3);
+
+    calcular_media(numero1,numero2,numero3);
+
+    return 0;
+}

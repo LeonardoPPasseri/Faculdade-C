@@ -4,27 +4,29 @@
 
 
 float calcular_idh(float E,float R, float L){
-    float res;
+    float res,IDH;
     res = (E+R+L)/3;
+
+    if(E >= (L + R)){
+        IDH = (E*L*R) / ((E+R+L)/3);
+        printf("\nIDH: %.2f\n",IDH);
+    }
+    else{
+        IDH = E*R*L;
+        printf("\nIDH: %.2f\n",IDH);
+    }
     return res;
 }
 
 void main(){
     float E,L,R,IDH;
 
-    printf(Educação:);
+    printf("Educacao:");
     scanf("%f",&E);
-    printf(Longevidade:);
+    printf("Longevidade:");
     scanf("%f",&L);
-    printf(Riqueza:);
+    printf("Riqueza:");
     scanf("%f",&R);
 
-    if(E >= (L + R)){
-        IDH = (E*L*R) / calcular_idh(E,R,L);
-        printf("O IDH e: %f(2)",IDH);
-    }
-    else{
-        IDH = calcular_idh(E,R,L);
-        printf("O IDG e: %f(2)",IDH);
-    }
+    calcular_idh(E,R,L);
 }

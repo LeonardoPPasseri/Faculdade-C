@@ -2,32 +2,29 @@
 #include <stdlib.h>
 #include <math.h>
 
-int le_calcular_soma(){
+int calcular_soma(){
+    int ressoma,numero1,numero2,numero3;
 
-    int numero1, numero2, numero3, ressoma;
-
-    printf("Digite o primeiro numero:");
-    scanf("%d", &numero1);
-
-    printf("Digite o primeiro numero:");
-    scanf("%d", &numero2);
-
-    printf("Digite o primeiro numero:");
-    scanf("%d", &numero3);
+    printf("Digite 3 numeros inteiros:");
+    scanf("%d%d%d", &numero1,&numero2,&numero3);
 
     ressoma = numero1 + numero2 + numero3;
+    printf("\nSoma:%d",ressoma);
 
     return ressoma;
 }
-int calcular_media(int ressoma){
-    int resmedia;
-    resmedia = ressoma/3;
-    printf("a media e: %d",resmedia);
-    return resmedia;
+void calcular_media(int totsoma){
+    float resmedia;
+
+    resmedia = totsoma/3.0;
+    printf("\nMedia: %.2f \n",resmedia);
 }
 
-void programa(){
+int main(){
+    int totsoma;
 
-    printf("a soma e: %d e a media e: %d", soma, media);
+    totsoma = calcular_soma();
+    calcular_media(totsoma);
 
+    return 0;
 }
