@@ -19,7 +19,7 @@ int analisar_SitEleitoral(int idade){
     }
 }
 
-void main(){
+int main(){
     int idade;
     int resultado;
 
@@ -29,4 +29,6 @@ void main(){
     resultado = analisar_SitEleitoral(idade);
 
     printf("\nSituação Eleitoral: %s",resultado);
+    
+    return 0;
 }

@@ -24,7 +24,7 @@ float calcular_dif(float A1,float A2){
     }
 }
 
-void main(){
+int main(){
     float p1,p2,A1,A2;
     int h,res;
 
@@ -42,4 +42,6 @@ void main(){
     res = calcular_dif(A1,A2);
 
     printf("%s",res);
+    
+    return 0;
 }

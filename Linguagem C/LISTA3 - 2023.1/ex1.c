@@ -18,7 +18,7 @@ float calcular_idh(float E,float R, float L){
     return res;
 }
 
-void main(){
+int main(){
     float E,L,R,IDH;
 
     printf("Educacao:");
@@ -29,4 +29,6 @@ void main(){
     scanf("%f",&R);
 
     calcular_idh(E,R,L);
+
+    return 0;
 }

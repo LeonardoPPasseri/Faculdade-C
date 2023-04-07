@@ -27,4 +27,6 @@ int main(){
 
     printf("\nMaior numero: %d",calcular_maior(num1,num2,num3));
 
+    return 0;
+
 }
