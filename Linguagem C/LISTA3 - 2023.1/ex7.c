@@ -1,15 +1,19 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
 float pagamento_dinheiro(float ValorProduto, float ValorDado, char forma)
 {
-    char res;
+    int res;
     float troco;
 
     if (forma == 'D' || forma == 'C'){
-        res = "Não tem troco!";
+        res = "Nao ha troco";
         return res;
     }
     else{
         troco = ValorDado - ValorProduto;
+
         return troco;
     }
 }
@@ -18,6 +22,7 @@ int main()
 {
     char forma;
     float ValorDado, ValorProduto;
+    int res;
 
     printf("Digite a forma de pagamento: ");
         scanf("%c", &forma);
@@ -36,15 +41,13 @@ int main()
             return 0;
         }
     }
-
+    res = pagamento_dinheiro(ValorProduto,ValorDado,forma);
     if(forma == 'N'){
         printf("\nValor do Produto: R$%.2f \nValor Dado pelo cliente: R$%.2f \nForma de pagamento: %c \nTroco: %.2f",ValorProduto,ValorDado,forma,pagamento_dinheiro(ValorProduto,ValorDado,forma));
     }
     else{
-        printf("\nValor do Produto: R$%.2f \nForma de pagamento: %c \n %s",ValorProduto,forma,pagamento_dinheiro(ValorProduto,ValorDado,forma));
+        printf("\nValor do Produto: R$%.2f \nForma de pagamento: %c \n %s",ValorProduto,forma,res);
     }
 
     return 0;
 }
-
-//Problema ao tentar exibir "Não tem troco!"

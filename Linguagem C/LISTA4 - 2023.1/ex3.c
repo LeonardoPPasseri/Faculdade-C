@@ -24,6 +24,8 @@ int analisador(){
 
     printf("\nA maior arrecadacao entre os postos: R$%.2f \nO valor total foi: R$%.2f",maiorvalor,totalvalor);
 
+    return 0;
+
 }
 
 int main(){
@@ -33,4 +35,3 @@ int main(){
     return 0;
 }
 
-//Pode não estar como pedido na questão

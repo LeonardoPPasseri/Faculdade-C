@@ -3,18 +3,18 @@
 #include <math.h>
 
 char menu(){
-    char tipo[60];
-    char opcao[60];
+    char tipo;
 
     fflush(stdin);
     printf("\n========= MENU =========");
     printf("\nAlternativas:\n");
-    printf("horista");
-    printf("   contratado");
-    printf("   servicos");
+    printf("H para Horista...");
+    printf("C para Contratado...");
+    printf("S para Servicos");
     printf("\n=========================");
-    printf("\nDigite uma das alternativas:\n ");
-    scanf("%s",&tipo[0]);
+
+    printf("\nDigite a letra de uma das alternativas:\n ");
+    scanf("%c",&tipo);
 
 
     return tipo;
@@ -50,26 +50,25 @@ float servicos(){
 
 
 int main(){
-    char tipo[60];
+    char tipo;
     int c;
 
     c = 0;
 
     while(c < 2){
         c = c + 1;
+        tipo = menu();
 
-        tipo = main();
-
-        if(tipo == "horista"){
-           printf("\nSalario:%.2f",horista());
+        if(tipo == 'H'){
+           printf("\nSalario:%.2f\n",horista());
         }
         else{
-            if(tipo == "contratado"){
-               printf("\nSalario:%.2f",contratado());
+            if(tipo == 'C'){
+               printf("\nSalario:%.2f\n",contratado());
             }
             else{
-                if(tipo == "servicos"){
-                   printf("\nSalario:%.2f",servicos());
+                if(tipo == 'S'){
+                    printf("\nSalario:%.2f\n",servicos());
                 }
                 else{
                     printf("\nERRO!Tipo nao identificado\n");
@@ -79,8 +78,7 @@ int main(){
         }
     }
 
-
     return 0;
 }
 
-// Erro ao tentar "tipo = main();" em que retorna (null)
+// A parte de servicos() não retorna;
