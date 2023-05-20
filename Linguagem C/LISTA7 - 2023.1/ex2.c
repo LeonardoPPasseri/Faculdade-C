@@ -8,3 +8,4 @@ void analizador(int vetor[],int qtd,int *pares,int *impares){
         }
     }
 }
+aac
