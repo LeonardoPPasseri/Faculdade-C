@@ -1,11 +1,10 @@
-void analizador(int vetor[],int qtd,int *pares,int *impares){
-
-    for(int c = 0;c < qtd;c++){
-        if(vetor[c] % 2 == 0){
-            (*pares)++;
+int analisador(int vetor[],int qtd,int *qtdimpar, int *qtdpar){
+    
+    for(int c=0;c<qtd;c++){
+        if(vetor[c] % 2 == 1){
+            (*qtdimpar)++;
         }else{
-            (*impares)++;
-        }
+            (*qtdpar)++;
+        }      
     }
 }
-aac

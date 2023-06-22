@@ -1,37 +1,36 @@
 #include <stdio.h>
 
-void umDepartamento(int qtd,float *maior,int *qtdmaior){
+void umDepartamento(int qtdfunc,float *maior,int *qtdmaior){
     int matricula;
-    *maior = 0;
     float salario;
-
-    for(int c = 0;c < qtd;c++){
-        printf("Matricula e Salario: ");
+    *maior = 0;
+    *qtdmaior = 0;
+    for(int c=0;c<qtdfunc;c++){
+        printf("Qual é a matricula e o salario? ");
         scanf("%d%f",&matricula,&salario);
-        if(salario > *maior){
+        if(salario>*maior){
             *maior = salario;
-            *qtdmaior = 1;
+            (*qtdmaior)=0;
+            (*qtdmaior)++;
         }else{
-            if(salario == *maior){
+            if(*maior == salario){
                 (*qtdmaior)++;
             }
         }
     }
 }
-
 int main(){
-    int qtd,cod,qtdmaior;
+    int qtdfunc,qtdmaior,codigo;
     float maior;
-    printf("Digite o codigo(0 - Finaliza): ");
-    scanf("%d",&cod);
-    while(cod != 0){
-        printf("Digite a quantidade de funcionarios do departamento: ");
-        scanf("%d",&qtd);
-        umDepartamento(qtd,&maior,&qtdmaior);
-        printf("O maior salario: R$ %.2f \nA quantidade de funcionarios com esse salario foi: %d\n\n",maior,qtdmaior);
-        printf("Digite o codigo(0 - Finaliza): ");
-        scanf("%d",&cod);
-    }
-
+    printf("Digite o codigo do departamento: ");
+    scanf("%d",&codigo);
+    do{
+        printf("Quantos funcionarios esse departamento possui? ");
+        scanf("%d",&qtdfunc);
+        umDepartamento(qtdfunc,&maior,&qtdmaior);
+        printf("\n\nMaior Salario:%.2f\nQuantidade de funcionarios com esse salario: %d\n\n",maior,qtdmaior);
+        printf("Digite o codigo do departamento[0 - Sair]: ");
+        scanf("%d",&codigo);
+    }while(codigo != 0);
     return 0;
 }

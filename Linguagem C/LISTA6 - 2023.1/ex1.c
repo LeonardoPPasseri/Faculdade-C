@@ -3,31 +3,26 @@
 int leValidaTipo(){
     int tipo;
     do{
-    printf("1-Fruta 2-Legume 3-Verdura");
-    printf("Digite o tipo: ");
-    scanf("%d",&tipo);
-
+        printf("1 - Fruta\n2 - Legume\n3 - Verdura");
+        printf("Digite qual o tipo do produto:");
+        scanf("%d",&tipo);
     }while(tipo < 1 || tipo > 3);
     return tipo;
 }
-
-void analizador(int qtd,int *qtdfruta,int *qtdlegume,int *qtdverdura){
-    int cod,info;
-    *qtdfruta = *qtdlegume = *qtdverdura = 0;
-    printf("\nDigite o codigo: ");
-    scanf("%d",&cod);
-
-    for(int c = 0;c < qtd;c++){
-        info = leValidaTipo();
-        if(info == 1){
-            (*qtdfruta)++;
+int contador(int qtd,int *fruta,int *legume,int *verdura){
+    int codigo,tipo;
+    for(int c=0;c<qtd;c++){
+        printf("Digite o codigo do produto:");
+        scanf("%d",&codigo);
+        tipo = leValidaTipo();
+        if(tipo == 1){
+            (*fruta)++;
         }else{
-            if(info == 2){
-                (*qtdlegume)++;
+            if(tipo == 2){
+                (*legume)++;
             }else{
-                (*qtdverdura)++;
+                (*verdura)++;
             }
         }
     }
 }
-

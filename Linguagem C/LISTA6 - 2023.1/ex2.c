@@ -1,30 +1,29 @@
-void analizador(int tipo, int *qtdN, int *qtdI){
+#include <stdio.h>
+
+void contador(char tipo,int *nacional,int *importado){
+
     if(tipo == 'N'){
-        (*qtdN)++;
+        (*nacional)++;
     }else{
-        if(tipo == 'I'){
-            (*qtdI)++;
-        }
+        (*importado)++;
     }
 }
-
 int main(){
-    int *qtdI = 0, *qtdN = 0;
-    int tipo,cod,estoque;
-    float ValorEstoque,ValorUnitario;
-    for(int c = 0;c < 5;c++){
-        printf("\nN - Nacional/I - Importado\n");
-        printf("Digite o codigo, tipo, estoque, valorUnitario: ");
-        scanf("%d %c%d%f",&cod,&tipo,&estoque,&ValorUnitario);
-
-        printf("\nCodigo:%d \nTipo: %c",cod,tipo);
-        ValorEstoque = estoque*ValorUnitario;
-        printf("\nO valor em estoque foi: R$%.2f\n",ValorEstoque);
-        
-        analizador(tipo,&qtdN,&qtdI);
+    char tipo;
+    int codigo,qtdnacional,qtdimportado,estoque;
+    float valor,preco;
+    for(int c=0;c<4;c++){
+        do{
+            printf("\n\nN - Nacional\nI - Importado");
+            printf("\nDigite o codigo do produto e o tipo:");
+            scanf("%d %c",&codigo,&tipo);
+        }while(tipo == 'N' && tipo == 'I');
+        contador(tipo,&qtdnacional,&qtdimportado);
+        printf("Digite o preco unitario e a qtd em estoque: ");
+        scanf("%f%d",&preco,&estoque);
+        valor = preco*estoque;
+        printf("\nCodigo: %d\nTipo: %c\nValor em Estoque: %.2f",codigo,tipo,valor);
     }
-    printf("\nProdutos Nacionais: %d\n",qtdN);
-    printf("Produtos Importados: %d",qtdI);
-
+    printf("\n\nNacional: %d\nImportado: %d",qtdnacional,qtdimportado);
     return 0;
 }
