@@ -1,7 +1,9 @@
 #include <stdio.h>
 #define MAX 10
 
-//ALGORITMO DE ORDENAÇÃO BUBBLE SORT(Crescente)
+//ALGORITMO DE ORDENAÇÃO BUBBLE SORT(Crescente) 
+
+//Em ordem decrescente -> Alterar vetor[i]<vetor[j]
 
 void Ordenador(int vetor[]){
     int aux;
@@ -16,7 +18,7 @@ void Ordenador(int vetor[]){
     }
     //1 2 3 4 5 6 7 8 9 10
     //10 9 8 7 6 5 4 3 2 1
-    
+
     //9 10
     //8 10 9
     //7 10 9 8
@@ -35,6 +37,7 @@ void inicializador(int vetor[]){
         vetor[c]=0;
     }
 }
+
 int main(){
     int vetor[MAX];
     inicializador(vetor);
