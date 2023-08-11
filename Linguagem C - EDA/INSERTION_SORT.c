@@ -15,6 +15,7 @@ void Ordenador(int vetor[]){
         vetor[j+1] = aux;
     }
     //5 4 2
+    //5 5 2
     //4 5 2
     //4 5 5
     //4 4 5
