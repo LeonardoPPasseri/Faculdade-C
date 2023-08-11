@@ -4,20 +4,18 @@
 //ALGORITMO DE ORDENAÇÃO SELECTION SORT(Crescente)
 
 void Ordenador(int vetor[]){
-    int aux=0,position;
+    int aux,position;
     for(int i=0;i<(MAX-1);i++){
             position = i;
-        for(int j=i+1;j<(MAX);j++){
-            if(vetor[i]>vetor[j]){
-                i = j;
+            for(int j=i+1;j<(MAX);j++){
+            if(vetor[position]>vetor[j]){
+                position = j;
             }
         }
-        aux = vetor[position];
-        vetor[position] = vetor[i];
-        vetor[i] = aux;
-        i = position;
+        aux = vetor[i];
+        vetor[i] = vetor[position];
+        vetor[position] = aux;
     }
-
     printf("O vetor ficou assim: ");
     for(int c=0;c<MAX;c++){
         printf("\n%d",vetor[c]);
@@ -29,6 +27,7 @@ void inicializador(int vetor[]){
         vetor[c]=0;
     }
 }
+
 int main(){
     int vetor[MAX];
     inicializador(vetor);
@@ -39,3 +38,6 @@ int main(){
     Ordenador(vetor);
     return 0;
 }
+
+
+// Professora pediu para não alterar as variaveis de controle como (i/j/c) que são usadas no for
