@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define MAX 10
+#define MAX 5
 
 //ALGORITMO DE ORDENAÇÃO BUBBLE SORT(Crescente) 
 
