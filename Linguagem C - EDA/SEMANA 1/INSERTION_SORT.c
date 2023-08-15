@@ -4,7 +4,7 @@
 //ALGORITMO DE ORDENAÇÃO INSERTION SORT(Crescente)
 
 void Ordenador(int vetor[]){
-    int aux=0,position=0,j;
+    int aux=0,j;
     for(int i=1;i<=MAX-1;i++){
            j = i-1;
            aux = vetor[i];
