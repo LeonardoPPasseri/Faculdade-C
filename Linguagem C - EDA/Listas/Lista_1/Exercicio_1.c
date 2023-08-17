@@ -7,6 +7,11 @@ void troca(int vetor[],int aux2,int aux3){
     vetor[aux2] = vetor[aux3];
     vetor[aux3] = aux;
 }
+void imprimir(int vetor[]){
+    for(int k=0;k<TAM;k++){
+        printf("%d ",vetor[k]);
+    }
+}
 void bubble(int vetor_A[]){
     for(int i=0;i<TAM-1;i++){
         for(int j=i+1;j<TAM;j++){
@@ -47,11 +52,6 @@ void insertion(int vetor_C[]){
     }
     printf("\nVetor ORDENADO INSERTION: ");
     imprimir(vetor_C);
-}
-void imprimir(int vetor[]){
-    for(int k=0;k<TAM;k++){
-        printf("%d ",vetor[k]);
-    }
 }
 void aleatorio(int vetor[]){
     srand(time(NULL));
