@@ -52,8 +52,7 @@ void insertion(int vetor_C[]){
             vetor_C[j+1] = vetor_C[j];
             j--;
         }
-        j++;
-        vetor_C[j]=aux;
+        vetor_C[j+1]=aux;
     }
     printf("\nVetor ORDENADO INSERTION: ");
     imprimir(vetor_C);
