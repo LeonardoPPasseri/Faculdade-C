@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 
 //FIBONACCI com recursividade
 //1 1 2 3 5 8 13 21
