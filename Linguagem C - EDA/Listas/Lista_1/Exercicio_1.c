@@ -1,7 +1,12 @@
+/* Elabore um programa que leia 50 números inteiros (sem repetição),
+classifique-os em ordem crescente usando os três métodos de ordenação
+(Bubble Sort, Selection Sort e Insertion Sort). */
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
 #define TAM 50
+
 void troca(int vetor[],int aux2,int aux3){
     int aux = vetor[aux2];
     vetor[aux2] = vetor[aux3];
@@ -59,28 +64,25 @@ void aleatorio(int vetor[]){
         vetor[c]=rand()%500;
     }
 }
+void TrataVetor(int vetor[]){
+    aleatorio(vetor);
+    printf("\nVetor_A DESORDENADO : ");
+    imprimir(vetor);
+}
 int main(){
     int vetor_A[TAM] = {0};
     int vetor_B[TAM] = {0};
     int vetor_C[TAM] = {0};
 
-    aleatorio(vetor_A);
-    aleatorio(vetor_B);
-    aleatorio(vetor_C);
-
-    printf("\nVetor_A DESORDENADO : ");
-    imprimir(vetor_A);
+    TrataVetor(vetor_A);
     bubble(vetor_A);
     printf("\n\n");
-
-    printf("\nVetor_B DESORDENADO: ");
-    imprimir(vetor_B);
+    TrataVetor(vetor_B);
     selection(vetor_B);
     printf("\n\n");
-
-    printf("\nVetor_C DESORDENADO: ");
-    imprimir(vetor_C);
+    TrataVetor(vetor_C);
     insertion(vetor_C);
+    printf("\n\n");
     
     return 0;
 }
