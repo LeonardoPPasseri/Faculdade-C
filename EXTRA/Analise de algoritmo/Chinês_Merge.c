@@ -12,7 +12,7 @@ void Merge_Sort(int vetor[],int aux[],int TAM,int ini,int fim){
         i = ini;
         j = meio+1;
         k = ini;
-        //MERGE
+
         while(i <= meio && j <= fim){
             if(vetor[i] < vetor[j]){
                 aux[k] = vetor[i];
@@ -40,41 +40,8 @@ void Merge_Sort(int vetor[],int aux[],int TAM,int ini,int fim){
             vetor[c] = aux[c];
         }
     }
-    printf("\ninicio:%d, fim:%d  :",ini,fim);
-    for(int c=0;c<TAM;c++){
-        printf("%d ",vetor[c]);
-    }
-    printf("\n");
-    for(int c=0;c<TAM;c++){
-        printf("%d ",aux[c]);
-    }
 }
 
 
-void imprimir(int vetor[],int TAM){
-    printf("\nVetor Ordenado: \n");
-    for(int c=0;c<TAM;c++){
-        printf("%d ",vetor[c]);
-    }
-}
-void aleatorio(int vetor[], int TAM){
-    srand(time(NULL));
-    printf("\nValores do vetor: \n");
-    for(int c=0;c<TAM;c++){
-        vetor[c] = ((rand() - (RAND_MAX/2))%500);
-        printf("%d ",vetor[c]);
-    }
-    printf("\n\n");
-}
+//25 10 6 15 4 11 
 
-int main(){
-    int vetor[8];
-    int TAM = sizeof(vetor)/sizeof(vetor[0]);
-    int aux[8] = {0};
-    aleatorio(vetor,TAM);
-    int ini = 0;
-    int fim = TAM-1;
-    Merge_Sort(vetor,aux,TAM,ini,fim);
-    imprimir(vetor,TAM);
-    return 0;
-}
