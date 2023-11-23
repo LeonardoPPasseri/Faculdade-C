@@ -1,5 +1,7 @@
 {
     "files.associations": {
-        "BUBBLE SORT.C": "cpp"
+        "BUBBLE SORT.C": "cpp",
+        "iostream": "cpp",
+        "ostream": "cpp"
     }
 }

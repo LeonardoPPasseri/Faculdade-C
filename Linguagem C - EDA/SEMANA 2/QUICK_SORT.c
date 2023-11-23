@@ -36,7 +36,7 @@ void imprimir(int vetor[], int TAM) {
 void aleatorio(int vetor[], int TAM) {
     srand(time(NULL));
     for (int c = 0; c < TAM; c++) {
-        vetor[c] = ((rand()) % 1000);
+        vetor[c] = ((rand()) % 100);
     }
     printf("Vetor DESORDENADO: ");
     imprimir(vetor, TAM);

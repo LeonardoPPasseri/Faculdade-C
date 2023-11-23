@@ -9,6 +9,7 @@ void Ordenador(int vetor[]){
     int aux;
     for(int i=0;i<(MAX-1);i++){
         for(int j=i+1;j<(MAX);j++){
+            printf("\n%d e %d",i,j);
             if(vetor[i]>vetor[j]){
                 aux = vetor[j];
                 vetor[j] = vetor[i];
@@ -16,16 +17,6 @@ void Ordenador(int vetor[]){
             }
         }
     }
-    //1 2 3 4 5 6 7 8 9 10
-    //10 9 8 7 6 5 4 3 2 1
-
-    //9 10
-    //8 10 9
-    //7 10 9 8
-    //1 10 9 8 7 6 5 4 3 2
-
-    //1 2 10 9 8 7 6 5 4 3
-    //1 2 3 4 5 6 7 8
     printf("O vetor ficou assim: ");
     for(int c=0;c<MAX;c++){
         printf("\n%d",vetor[c]);
