@@ -44,7 +44,6 @@ void retirar(){
     }else{
         aux = topo;
         topo = aux -> prox;
-      //  topo -> ant = topo;
         delete aux;
         cout << "O elemento foi retirado da lista!" << endl;
     }
